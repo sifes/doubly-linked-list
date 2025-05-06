@@ -1,0 +1,14 @@
+{
+	"name": "doubly-linked-list",
+	"version": "1.0.0",
+	"description": "Implementation of a doubly linked list in JavaScript",
+	"main": "list.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"author": "Korol Oleksandr",
+	"license": "MIT",
+	"dependencies": {
+		"jest": "^29.7.0"
+	}
+}
