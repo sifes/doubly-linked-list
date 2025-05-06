@@ -1,7 +1,7 @@
-const DoublyLinkedList = require('./list.js')
+const ArrayBasedList = require('./list')
 
 // Create a new list
-const list = new DoublyLinkedList()
+const list = new ArrayBasedList()
 console.log('Empty list length:', list.length())
 
 // Append elements
@@ -59,3 +59,25 @@ console.log('Extended list:', list.toString())
 console.log('\nClearing the list...')
 list.clear()
 console.log('List after clearing:', list.toString())
+
+// Try to use invalid operations (uncomment to see errors)
+/*
+console.log('\nTrying invalid operations:');
+try {
+	list.insert('x', 10);
+} catch (error) {
+	console.log('Insert error:', error.message);
+}
+
+try {
+	list.delete(5);
+} catch (error) {
+	console.log('Delete error:', error.message);
+}
+
+try {
+	list.get(3);
+} catch (error) {
+	console.log('Get error:', error.message);
+}
+*/

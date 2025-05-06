@@ -1,10 +1,10 @@
-const DoublyLinkedList = require('./list')
+const ArrayBasedList = require('./list.js')
 
-describe('DoublyLinkedList', () => {
+describe('ArrayBasedList', () => {
 	let list
 
 	beforeEach(() => {
-		list = new DoublyLinkedList()
+		list = new ArrayBasedList()
 	})
 
 	describe('length()', () => {
@@ -283,7 +283,7 @@ describe('DoublyLinkedList', () => {
 			list.append('a')
 			list.append('b')
 
-			const otherList = new DoublyLinkedList()
+			const otherList = new ArrayBasedList()
 			otherList.append('c')
 			otherList.append('d')
 
@@ -298,7 +298,7 @@ describe('DoublyLinkedList', () => {
 		it('creates independent copy of extended elements', () => {
 			list.append('a')
 
-			const otherList = new DoublyLinkedList()
+			const otherList = new ArrayBasedList()
 			otherList.append('b')
 			otherList.append('c')
 
@@ -313,7 +313,7 @@ describe('DoublyLinkedList', () => {
 		it('throws error for invalid argument', () => {
 			expect(() => {
 				list.extend('not a list')
-			}).toThrow('The argument must be a DoublyLinkedList')
+			}).toThrow('The argument must be an ArrayBasedList')
 		})
 	})
 
