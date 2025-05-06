@@ -73,6 +73,27 @@ describe('ArrayBasedList', () => {
 		})
 	})
 
+	describe('Failing Test for List', () => {
+		it('should deliberately fail to demonstrate CI failure', () => {
+			const list = new List()
+
+			// Add some elements
+			list.append('a')
+			list.append('b')
+			list.append('c')
+
+			// This assertion will fail because the length is 3, not 4
+			expect(list.length()).toBe(4)
+		})
+
+		// This test will pass, showing that not all tests fail
+		it('should still pass', () => {
+			const list = new List()
+			list.append('a')
+			expect(list.length()).toBe(1)
+		})
+	})
+
 	describe('delete()', () => {
 		it('removes and returns the first element', () => {
 			list.append('a')
